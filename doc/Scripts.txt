@@ -1,0 +1,10 @@
+Script to generate the models
+-----------------------------
+
+rails generate model Person email:string name:string 
+rails generate model Persona name:string 
+rails generate model Persona_Person persona:references person:references
+rails generate model Interest name:string candidate:string 
+rails generate model Interest_Persona interest:references persona:references
+rails generate model Rol name:string
+rails generate model Person_Rol person:references rol:references

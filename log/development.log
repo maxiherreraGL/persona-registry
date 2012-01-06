@@ -1,0 +1,141 @@
+  [1m[36m (41.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (37.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (3.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePeople (20120106121806)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (112.0ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "email" character varying(255), "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106121806')
+  [1m[36m (43.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePersonas (20120106121841)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (51.0ms)[0m  [1mCREATE TABLE "personas" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106121841')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePersonaPeople (20120106121917)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (44.0ms)[0m  [1mCREATE TABLE "persona_people" ("id" serial primary key, "persona_id" integer, "person_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (31.0ms)[0m  CREATE INDEX "index_persona_people_on_persona_id" ON "persona_people" ("persona_id")
+  [1m[36m (30.0ms)[0m  [1mCREATE INDEX "index_persona_people_on_person_id" ON "persona_people" ("person_id")[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106121917')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateInterests (20120106121943)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (80.0ms)[0m  [1mCREATE TABLE "interests" ("id" serial primary key, "name" character varying(255), "candidate" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106121943')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateInterestPersonas (20120106122004)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (33.0ms)[0m  [1mCREATE TABLE "interest_personas" ("id" serial primary key, "interest_id" integer, "persona_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (30.0ms)[0m  CREATE INDEX "index_interest_personas_on_interest_id" ON "interest_personas" ("interest_id")
+  [1m[36m (23.0ms)[0m  [1mCREATE INDEX "index_interest_personas_on_persona_id" ON "interest_personas" ("persona_id")[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106122004')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRols (20120106122025)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (39.0ms)[0m  [1mCREATE TABLE "rols" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106122025')
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePersonRols (20120106130558)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (31.0ms)[0m  [1mCREATE TABLE "person_rols" ("id" serial primary key, "person_id" integer, "rol_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (32.0ms)[0m  CREATE INDEX "index_person_rols_on_person_id" ON "person_rols" ("person_id")
+  [1m[36m (30.0ms)[0m  [1mCREATE INDEX "index_person_rols_on_rol_id" ON "person_rols" ("rol_id")[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106130558')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (6.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  SET search_path TO public
+  [1m[36m (5002.0ms)[0m  [1mDROP DATABASE IF EXISTS "test_persona_registry"[0m
+PGError: ERROR:  la base de datos «test_persona_registry» está siendo utilizada por otros usuarios
+DETAIL:  Hay otras 1 sesiones usando la base de datos.
+: DROP DATABASE IF EXISTS "test_persona_registry"
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SET search_path TO public
+  [1m[36m (5002.0ms)[0m  [1mDROP DATABASE IF EXISTS "test_persona_registry"[0m
+PGError: ERROR:  la base de datos «test_persona_registry» está siendo utilizada por otros usuarios
+DETAIL:  Hay otras 1 sesiones usando la base de datos.
+: DROP DATABASE IF EXISTS "test_persona_registry"
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SET search_path TO public
+  [1m[36m (1225.0ms)[0m  [1mDROP DATABASE IF EXISTS "test_persona_registry"[0m
+  [1m[35m (0.0ms)[0m  SET search_path TO public
+  [1m[36m (4581.0ms)[0m  [1mCREATE DATABASE "test_persona_registry" ENCODING = 'utf8'[0m
+  [1m[35m (46.0ms)[0m  CREATE TABLE "interest_personas" ("id" serial primary key, "interest_id" integer, "persona_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (32.0ms)[0m  [1mCREATE INDEX "index_interest_personas_on_interest_id" ON "interest_personas" ("interest_id")[0m
+  [1m[35m (26.0ms)[0m  CREATE INDEX "index_interest_personas_on_persona_id" ON "interest_personas" ("persona_id")
+  [1m[36m (66.0ms)[0m  [1mCREATE TABLE "interests" ("id" serial primary key, "name" character varying(255), "candidate" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (79.0ms)[0m  CREATE TABLE "people" ("id" serial primary key, "email" character varying(255), "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (71.0ms)[0m  [1mCREATE TABLE "person_rols" ("id" serial primary key, "person_id" integer, "rol_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (25.0ms)[0m  CREATE INDEX "index_person_rols_on_person_id" ON "person_rols" ("person_id")
+  [1m[36m (30.0ms)[0m  [1mCREATE INDEX "index_person_rols_on_rol_id" ON "person_rols" ("rol_id")[0m
+  [1m[35m (28.0ms)[0m  CREATE TABLE "persona_people" ("id" serial primary key, "persona_id" integer, "person_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (27.0ms)[0m  [1mCREATE INDEX "index_persona_people_on_person_id" ON "persona_people" ("person_id")[0m
+  [1m[35m (31.0ms)[0m  CREATE INDEX "index_persona_people_on_persona_id" ON "persona_people" ("persona_id")
+  [1m[36m (44.0ms)[0m  [1mCREATE TABLE "personas" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (43.0ms)[0m  CREATE TABLE "rols" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (43.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106130558')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120106121806')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106121841')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120106121917')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106121943')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120106122004')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106122025')
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SET search_path TO public
+  [1m[36m (272.0ms)[0m  [1mDROP DATABASE IF EXISTS "test_persona_registry"[0m
+  [1m[35m (0.0ms)[0m  SET search_path TO public
+  [1m[36m (6015.0ms)[0m  [1mCREATE DATABASE "test_persona_registry" ENCODING = 'utf8'[0m
+  [1m[35m (42.0ms)[0m  CREATE TABLE "interest_personas" ("id" serial primary key, "interest_id" integer, "persona_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (37.0ms)[0m  [1mCREATE INDEX "index_interest_personas_on_interest_id" ON "interest_personas" ("interest_id")[0m
+  [1m[35m (32.0ms)[0m  CREATE INDEX "index_interest_personas_on_persona_id" ON "interest_personas" ("persona_id")
+  [1m[36m (71.0ms)[0m  [1mCREATE TABLE "interests" ("id" serial primary key, "name" character varying(255), "candidate" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (68.0ms)[0m  CREATE TABLE "people" ("id" serial primary key, "email" character varying(255), "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (38.0ms)[0m  [1mCREATE TABLE "person_rols" ("id" serial primary key, "person_id" integer, "rol_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (22.0ms)[0m  CREATE INDEX "index_person_rols_on_person_id" ON "person_rols" ("person_id")
+  [1m[36m (31.0ms)[0m  [1mCREATE INDEX "index_person_rols_on_rol_id" ON "person_rols" ("rol_id")[0m
+  [1m[35m (39.0ms)[0m  CREATE TABLE "persona_people" ("id" serial primary key, "persona_id" integer, "person_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (34.0ms)[0m  [1mCREATE INDEX "index_persona_people_on_person_id" ON "persona_people" ("person_id")[0m
+  [1m[35m (25.0ms)[0m  CREATE INDEX "index_persona_people_on_persona_id" ON "persona_people" ("persona_id")
+  [1m[36m (36.0ms)[0m  [1mCREATE TABLE "personas" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (36.0ms)[0m  CREATE TABLE "rols" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (26.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106130558')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120106121806')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106121841')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120106121917')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106121943')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120106122004')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106122025')
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SET search_path TO public
+  [1m[36m (233.0ms)[0m  [1mDROP DATABASE IF EXISTS "test_persona_registry"[0m
+  [1m[35m (0.0ms)[0m  SET search_path TO public
+  [1m[36m (5599.0ms)[0m  [1mCREATE DATABASE "test_persona_registry" ENCODING = 'utf8'[0m
+  [1m[35m (46.0ms)[0m  CREATE TABLE "interest_personas" ("id" serial primary key, "interest_id" integer, "persona_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (28.0ms)[0m  [1mCREATE INDEX "index_interest_personas_on_interest_id" ON "interest_personas" ("interest_id")[0m
+  [1m[35m (37.0ms)[0m  CREATE INDEX "index_interest_personas_on_persona_id" ON "interest_personas" ("persona_id")
+  [1m[36m (71.0ms)[0m  [1mCREATE TABLE "interests" ("id" serial primary key, "name" character varying(255), "candidate" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (57.0ms)[0m  CREATE TABLE "people" ("id" serial primary key, "email" character varying(255), "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (33.0ms)[0m  [1mCREATE TABLE "person_rols" ("id" serial primary key, "person_id" integer, "rol_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (30.0ms)[0m  CREATE INDEX "index_person_rols_on_person_id" ON "person_rols" ("person_id")
+  [1m[36m (40.0ms)[0m  [1mCREATE INDEX "index_person_rols_on_rol_id" ON "person_rols" ("rol_id")[0m
+  [1m[35m (51.0ms)[0m  CREATE TABLE "persona_people" ("id" serial primary key, "persona_id" integer, "person_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (31.0ms)[0m  [1mCREATE INDEX "index_persona_people_on_person_id" ON "persona_people" ("person_id")[0m
+  [1m[35m (40.0ms)[0m  CREATE INDEX "index_persona_people_on_persona_id" ON "persona_people" ("persona_id")
+  [1m[36m (59.0ms)[0m  [1mCREATE TABLE "personas" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (70.0ms)[0m  CREATE TABLE "rols" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (34.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106130558')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120106121806')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106121841')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120106121917')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106121943')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120106122004')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106122025')
