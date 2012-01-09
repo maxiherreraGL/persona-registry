@@ -1,4 +1,12 @@
 PersonaRegistry::Application.routes.draw do
+  get "patterns/singleton"
+
+  get "patterns/factory"
+
+  get "patterns/builder"
+
+  get "patterns/strategy"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

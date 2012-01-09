@@ -139,3 +139,293 @@ DETAIL:  Hay otras 1 sesiones usando la base de datos.
   [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106121943')
   [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120106122004')[0m
   [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120106122025')
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-01-09 16:22:28 -0300
+
+PGError (FATAL:  no existe la base de datos «dev_persona_registry»
+):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (51.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (130.0ms)
+
+
+Started GET "/singleton" for 127.0.0.1 at 2012-01-09 16:22:42 -0300
+
+PGError (FATAL:  no existe la base de datos «dev_persona_registry»
+):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-01-09 16:25:31 -0300
+
+PGError (FATAL:  no existe la base de datos «dev_persona_registry»
+):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-01-09 16:25:32 -0300
+
+PGError (FATAL:  no existe la base de datos «dev_persona_registry»
+):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/singleton" for 127.0.0.1 at 2012-01-09 16:25:40 -0300
+
+PGError (FATAL:  no existe la base de datos «dev_persona_registry»
+):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+  [1m[36m (33.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (67.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (2.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePeople (20120106121806)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (85.0ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "email" character varying(255), "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (13.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106121806')
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePersonas (20120106121841)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (36.0ms)[0m  [1mCREATE TABLE "personas" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106121841')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePersonaPeople (20120106121917)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (46.0ms)[0m  [1mCREATE TABLE "persona_people" ("id" serial primary key, "persona_id" integer, "person_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (17.0ms)[0m  CREATE INDEX "index_persona_people_on_persona_id" ON "persona_people" ("persona_id")
+  [1m[36m (13.0ms)[0m  [1mCREATE INDEX "index_persona_people_on_person_id" ON "persona_people" ("person_id")[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106121917')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateInterests (20120106121943)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (46.0ms)[0m  [1mCREATE TABLE "interests" ("id" serial primary key, "name" character varying(255), "candidate" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106121943')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateInterestPersonas (20120106122004)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (25.0ms)[0m  [1mCREATE TABLE "interest_personas" ("id" serial primary key, "interest_id" integer, "persona_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (17.0ms)[0m  CREATE INDEX "index_interest_personas_on_interest_id" ON "interest_personas" ("interest_id")
+  [1m[36m (30.0ms)[0m  [1mCREATE INDEX "index_interest_personas_on_persona_id" ON "interest_personas" ("persona_id")[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106122004')
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRols (20120106122025)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (33.0ms)[0m  [1mCREATE TABLE "rols" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106122025')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePersonRols (20120106130558)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (29.0ms)[0m  [1mCREATE TABLE "person_rols" ("id" serial primary key, "person_id" integer, "rol_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (28.0ms)[0m  CREATE INDEX "index_person_rols_on_person_id" ON "person_rols" ("person_id")
+  [1m[36m (21.0ms)[0m  [1mCREATE INDEX "index_person_rols_on_rol_id" ON "person_rols" ("rol_id")[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120106130558')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-01-09 16:27:14 -0300
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_in"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (55.0ms)
+
+
+Started GET "/singleton" for 127.0.0.1 at 2012-01-09 16:27:19 -0300
+
+ActionController::RoutingError (No route matches [GET] "/singleton"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/singleton" for 127.0.0.1 at 2012-01-09 17:17:03 -0300
+
+ActionController::RoutingError (No route matches [GET] "/singleton"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (54.0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-09 17:17:51 -0300
+  Processing by PatternsController#singleton as HTML
+Completed 500 Internal Server Error in 19ms
+
+NameError (undefined local variable or method `unique' for #<PatternsController:0x343fe18>):
+  app/controllers/patterns_controller.rb:4:in `singleton'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-09 17:20:33 -0300
+  Processing by PatternsController#singleton as HTML
+Completed 500 Internal Server Error in 22ms
+
+NameError (undefined local variable or method `unique' for #<PatternsController:0x39fa080>):
+  app/controllers/patterns_controller.rb:6:in `singleton'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-09 17:20:36 -0300
+  Processing by PatternsController#singleton as HTML
+Completed 500 Internal Server Error in 6ms
+
+NameError (undefined local variable or method `unique' for #<PatternsController:0x37d2c80>):
+  app/controllers/patterns_controller.rb:6:in `singleton'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-09 17:21:27 -0300
+  Processing by PatternsController#singleton as HTML
+Completed 500 Internal Server Error in 7ms
+
+NameError (undefined local variable or method `unique' for #<PatternsController:0x3a38b28>):
+  app/controllers/patterns_controller.rb:6:in `singleton'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-09 17:22:11 -0300
+  Processing by PatternsController#singleton as HTML
+Completed 500 Internal Server Error in 9ms
+
+NameError (undefined local variable or method `unique' for #<PatternsController:0x39a4c58>):
+  app/controllers/patterns_controller.rb:6:in `singleton'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-09 17:27:00 -0300
+
+LoadError (cannot load such file -- examples/unique.rb):
+  app/controllers/patterns_controller.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-09 17:27:13 -0300
+  Processing by PatternsController#singleton as HTML
+Rendered patterns/singleton.html.erb within layouts/application (0.0ms)
+Compiled application.css  (1ms)  (pid 3756)
+Compiled patterns.css  (23ms)  (pid 3756)
+Compiled application.js  (9ms)  (pid 3756)
+Compiled jquery.js  (74ms)  (pid 3756)
+Compiled jquery_ujs.js  (15ms)  (pid 3756)
+Compiled patterns.js  (353ms)  (pid 3756)
+Completed 200 OK in 1060ms (Views: 1059.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-09 17:27:15 -0300
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-09 17:27:16 -0300
+Served asset /patterns.css - 200 OK (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-09 17:27:16 -0300
+Served asset /jquery.js - 200 OK (12ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-09 17:27:16 -0300
+Served asset /patterns.js - 200 OK (22ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-09 17:27:16 -0300
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-09 17:27:16 -0300
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-09 17:28:18 -0300
+  Processing by PatternsController#singleton as HTML
+Rendered patterns/singleton.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-09 17:28:19 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-09 17:28:19 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-09 17:28:19 -0300
+Served asset /patterns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-09 17:28:19 -0300
+Served asset /patterns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-09 17:28:19 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-09 17:28:19 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-09 17:31:35 -0300
+  Processing by PatternsController#singleton as HTML
+Rendered patterns/singleton.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-09 17:31:35 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-09 17:31:36 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-09 17:31:36 -0300
+Served asset /patterns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-09 17:31:36 -0300
+Served asset /patterns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-09 17:31:36 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-09 17:31:36 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
