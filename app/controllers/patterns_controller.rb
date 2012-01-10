@@ -16,7 +16,10 @@ class PatternsController < ApplicationController
       
   end
 
-  def factory
+  #Para llamarlo patterns/factory 
+  def factory  
+    @potatoe = Factory.create_product('Potatoe').type
+    @tomatoe = Factory.create_product('Tomatoe').type
   end
 
   def builder

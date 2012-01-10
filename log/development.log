@@ -1542,3 +1542,687 @@ Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatc
 Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
 Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
 
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-10 12:54:15 -0300
+  Processing by PatternsController#singleton as HTML
+Rendered patterns/singleton.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 336ms (Views: 326.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-10 12:54:18 -0300
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-10 12:54:19 -0300
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-10 12:54:19 -0300
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-10 12:54:19 -0300
+Served asset /patterns.css - 200 OK (4ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-10 12:54:19 -0300
+Served asset /patterns.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-10 12:54:19 -0300
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 12:54:25 -0300
+  Processing by PatternsController#factory as HTML
+Rendered patterns/factory.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-10 12:54:25 -0300
+Served asset /patterns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-10 12:54:25 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-10 12:54:25 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-10 12:54:25 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-10 12:54:25 -0300
+Served asset /patterns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-10 12:54:25 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 12:57:42 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 4ms
+
+NameError (uninitialized constant PatternsController::AbstractFactory):
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 12:59:01 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::AbstractFactory):
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 12:59:28 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::PotatoeFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 12:59:43 -0300
+  Processing by PatternsController#factory as HTML
+Rendered patterns/factory.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-10 12:59:43 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-10 12:59:44 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-10 12:59:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-10 12:59:45 -0300
+Served asset /patterns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-10 12:59:45 -0300
+Served asset /patterns.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-10 12:59:45 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 13:00:16 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 4ms
+
+NameError (uninitialized constant PatternsController::PotatoeFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 13:02:18 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 4ms
+
+NameError (uninitialized constant PatternsController::PotatoeFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 13:08:45 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 4ms
+
+NameError (uninitialized constant PatternsController::PotatoeFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 13:12:04 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::PotatoeFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 13:12:07 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::PotatoeFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 13:13:17 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::PotatoeFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-10 15:41:40 -0300
+  Processing by PatternsController#singleton as HTML
+Rendered patterns/singleton.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-10 15:41:40 -0300
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-10 15:41:41 -0300
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-10 15:41:41 -0300
+Served asset /patterns.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-10 15:41:41 -0300
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-10 15:41:41 -0300
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-10 15:41:41 -0300
+Served asset /patterns.js - 200 OK (0ms)
+
+
+Started GET "/patterns/strategy" for 127.0.0.1 at 2012-01-10 15:41:55 -0300
+  Processing by PatternsController#strategy as HTML
+Rendered patterns/strategy.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-10 15:41:55 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-10 15:41:55 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-10 15:41:55 -0300
+Served asset /patterns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-10 15:41:55 -0300
+Served asset /patterns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-10 15:41:55 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-10 15:41:55 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 16:57:38 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::ProductFactory):
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 16:57:40 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::ProductFactory):
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-10 16:58:20 -0300
+  Processing by PatternsController#singleton as HTML
+Rendered patterns/singleton.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 28ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-10 16:58:21 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-10 16:58:21 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-10 16:58:21 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-10 16:58:21 -0300
+Served asset /patterns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-10 16:58:21 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-10 16:58:21 -0300
+Served asset /patterns.js - 304 Not Modified (0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 16:58:26 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::ProductFactory):
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 16:58:47 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::ProductFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 16:58:49 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::ProductFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 16:59:31 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::ProductFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 16:59:57 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::ProductFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 16:59:58 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::ProductFactory):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:00:22 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `new' for Factory:Module):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:00:26 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `new' for Factory:Module):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:00:28 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `new' for Factory:Module):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:01:02 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `new' for Factory:Module):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:01:05 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `new' for Factory:Module):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:01:33 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::Shop):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:01:35 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::Shop):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:02:23 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `new' for Factory:Module):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:03:05 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `new' for Factory:Module):
+  app/controllers/patterns_controller.rb:22:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:08:15 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `create_product' for Factory:Module):
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:09:39 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::Potatoe):
+  app/controllers/patterns_controller.rb:24:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:10:06 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `create_product' for Factory:Module):
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-10 17:12:48 -0300
+  Processing by PatternsController#singleton as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant PatternsController::Unique):
+  app/controllers/patterns_controller.rb:5:in `singleton'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/singleton" for 127.0.0.1 at 2012-01-10 17:12:56 -0300
+  Processing by PatternsController#singleton as HTML
+Rendered patterns/singleton.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-10 17:12:56 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-10 17:12:57 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-10 17:12:57 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-10 17:12:57 -0300
+Served asset /patterns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-10 17:12:57 -0300
+Served asset /patterns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-10 17:12:57 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:13:28 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 5ms
+
+NameError (wrong constant name {#name}):
+  app/examples/factory.rb:4:in `const_get'
+  app/examples/factory.rb:4:in `create_product'
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:17:57 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `Object' for Object:Class):
+  app/examples/factory.rb:4:in `create_product'
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:18:09 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `Object' for Object:Class):
+  app/examples/factory.rb:4:in `create_product'
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:18:20 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 22ms
+
+NameError (undefined local variable or method `type' for Factory:Class):
+  app/examples/factory.rb:4:in `create_product'
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:21:11 -0300
+  Processing by PatternsController#factory as HTML
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `new' for nil:NilClass):
+  app/examples/factory.rb:4:in `create_product'
+  app/controllers/patterns_controller.rb:21:in `factory'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:23:01 -0300
+  Processing by PatternsController#factory as HTML
+Rendered patterns/factory.html.erb within layouts/application (141.0ms)
+Completed 500 Internal Server Error in 181ms
+
+ActionView::Template::Error (undefined local variable or method `potatoe' for #<#<Class:0x3988fb0>:0x393e670>):
+    4: <%= @tomatoe %>
+    5: 
+    6: <p>Make potatoe</p>
+    7: <%= potatoe %>
+    8: 
+  app/views/patterns/factory.html.erb:7:in `_app_views_patterns_factory_html_erb___978222589_29032080'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-10 17:24:09 -0300
+  Processing by PatternsController#factory as HTML
+Rendered patterns/factory.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-10 17:24:09 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-10 17:24:10 -0300
+Served asset /patterns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-10 17:24:10 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-10 17:24:10 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-10 17:24:10 -0300
+Served asset /patterns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-10 17:24:10 -0300
+Served asset /application.js - 304 Not Modified (0ms)
