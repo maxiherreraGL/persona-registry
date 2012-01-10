@@ -1,4 +1,5 @@
 PersonaRegistry::Application.routes.draw do
+
    
   PersonaRegistry::Application.routes.draw do
   match '/people' => Api::Core
@@ -6,6 +7,16 @@ PersonaRegistry::Application.routes.draw do
   PersonaRegistry::Application.routes.draw do
   match '/people/:id' => Api::Core
   end
+
+  get "patterns/singleton"
+
+  get "patterns/factory"
+
+  get "patterns/builder"
+
+  get "patterns/strategy"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
