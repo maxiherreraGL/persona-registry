@@ -12,23 +12,35 @@ module Api
     end
     
     post '/people' do
-      @person = Person.new(params[:person])
-      @person.save
+      person = Person.new(params[:person])
+      if person.save
+        'El registro fue guardado con exito'.to_json
+      else
+        'Ha ocurrido un problema no se guardo el registro'.to_json
+        
+      end
+      
     end
     
     put '/people/:id' do
-      @person = Person.find(params[:id])
-      if @person.update_attributes(params[:person])
-        
+      person = Person.find(params[:id])
+
+      if person.update_attributes(params[:person])
+        "El registro afectado fue #{params[:id]} y los parametros modificados fueron #{params[:person]}".to_json
       else
+        'Ha ocurrido un error'.to_json
       end
     
     end
     
     delete '/people/:id' do 
-      @person = Person.find(params[:id])
-      @person.destroy
-      puts 'llala'
+      person = Person.find(params[:id])
+      
+      if person.destroy
+        'El registro fue eliminado'.to_json
+      else
+        'Ha ocurrido un problema el registro no se elimino'.to_json
+      end
     end
     
    
