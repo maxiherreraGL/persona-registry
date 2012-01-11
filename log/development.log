@@ -2226,3 +2226,203 @@ Served asset /patterns.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-10 17:24:10 -0300
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-11 11:31:20 -0300
+  Processing by PatternsController#factory as HTML
+Rendered patterns/factory.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 334ms (Views: 324.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-11 11:31:23 -0300
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-11 11:31:24 -0300
+Served asset /patterns.css - 200 OK (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-11 11:31:24 -0300
+Served asset /jquery.js - 200 OK (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-11 11:31:24 -0300
+Served asset /jquery_ujs.js - 200 OK (21ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-11 11:31:24 -0300
+Served asset /patterns.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-11 11:31:24 -0300
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/patterns/builder" for 127.0.0.1 at 2012-01-11 11:31:29 -0300
+  Processing by PatternsController#builder as HTML
+Completed 500 Internal Server Error in 17ms
+
+NotImplementedError (NotImplementedError):
+  app/examples/car_builder.rb:15:in `buildWheels'
+  app/examples/car_builder.rb:5:in `buildCar'
+  app/examples/car_shop.rb:8:in `buildCar'
+  app/controllers/patterns_controller.rb:33:in `builder'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/builder" for 127.0.0.1 at 2012-01-11 11:32:14 -0300
+  Processing by PatternsController#builder as HTML
+Completed 500 Internal Server Error in 17ms
+
+NameError (undefined local variable or method `whees' for #<Car:0x387d5f0>):
+  app/examples/car.rb:4:in `setWheels'
+  app/examples/audi_car_builder.rb:4:in `buildWheels'
+  app/examples/car_builder.rb:5:in `buildCar'
+  app/examples/car_shop.rb:8:in `buildCar'
+  app/controllers/patterns_controller.rb:33:in `builder'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/builder" for 127.0.0.1 at 2012-01-11 11:32:39 -0300
+  Processing by PatternsController#builder as HTML
+Completed 500 Internal Server Error in 15ms
+
+NameError (undefined local variable or method `whees' for #<Car:0x37eebe0>):
+  app/examples/car.rb:4:in `setWheels'
+  app/examples/audi_car_builder.rb:4:in `buildWheels'
+  app/examples/car_builder.rb:5:in `buildCar'
+  app/examples/car_shop.rb:8:in `buildCar'
+  app/controllers/patterns_controller.rb:33:in `builder'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/patterns/builder" for 127.0.0.1 at 2012-01-11 11:33:01 -0300
+  Processing by PatternsController#builder as HTML
+Completed 500 Internal Server Error in 15ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/examples/car.rb:15:in `getMotor'
+  app/controllers/patterns_controller.rb:39:in `builder'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/builder" for 127.0.0.1 at 2012-01-11 11:33:21 -0300
+  Processing by PatternsController#builder as HTML
+Rendered patterns/builder.html.erb within layouts/application (139.0ms)
+Completed 500 Internal Server Error in 164ms
+
+ActionView::Template::Error (undefined local variable or method `wheels' for #<#<Class:0x3160d10>:0x3164b50>):
+    1: <h1>Patterns#builder</h1>
+    2: 
+    3: <p>Wheels</p>
+    4: <%= wheels %>
+    5: 
+    6: <p>Motor</p>
+    7: <%= @motor %>
+  app/views/patterns/builder.html.erb:4:in `_app_views_patterns_builder_html_erb___654384561_25894452'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/patterns/builder" for 127.0.0.1 at 2012-01-11 11:33:37 -0300
+  Processing by PatternsController#builder as HTML
+Rendered patterns/builder.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-11 11:33:37 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-11 11:33:38 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-11 11:33:38 -0300
+Served asset /patterns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-11 11:33:38 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-11 11:33:38 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-11 11:33:38 -0300
+Served asset /patterns.js - 304 Not Modified (0ms)
+
+
+Started GET "/patterns/builder" for 127.0.0.1 at 2012-01-11 11:35:11 -0300
+  Processing by PatternsController#builder as HTML
+Rendered patterns/builder.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-11 11:35:11 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-11 11:35:12 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-11 11:35:12 -0300
+Served asset /patterns.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-11 11:35:12 -0300
+Served asset /patterns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-11 11:35:12 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-11 11:35:12 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/patterns/builder" for 127.0.0.1 at 2012-01-11 11:39:21 -0300
+  Processing by PatternsController#builder as HTML
+Rendered patterns/builder.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-11 11:39:22 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-11 11:39:23 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-11 11:39:23 -0300
+Served asset /patterns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-11 11:39:23 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-11 11:39:23 -0300
+Served asset /patterns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-11 11:39:23 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)

@@ -23,6 +23,40 @@ class PatternsController < ApplicationController
   end
 
   def builder
+    
+    carShop = CarShop.new
+    
+    fordCarBuilder = FordCarBuilder.new
+    
+    audiCarBuilder = AudiCarBuilder.new
+    
+    #Build Ford Car
+    carShop.setCarBuilder fordCarBuilder
+    
+    carShop.buildCar
+    
+    car = carShop.getCar
+    
+    @wheels = car.getWheels
+    
+    @motor = car.getMotor
+    
+    @price = car.getPrice
+    
+    
+    #Build Audi Car
+    carShop.setCarBuilder audiCarBuilder
+    
+    carShop.buildCar
+    
+    car = carShop.getCar
+    
+    @wheels2 = car.getWheels
+    
+    @motor2 = car.getMotor
+    
+    @price2 = car.getPrice
+    
   end
 
   def strategy
