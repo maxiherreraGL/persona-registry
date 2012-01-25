@@ -4,8 +4,9 @@ class PeopleController < ActionController::Base
   # GET /people.json
   def index
     @people = Person.order(:name)
+    
       respond_to do |format|
-      format.xml { render :xml => @people }
+      format.json { render json: @people }
     end
   end
 
@@ -74,6 +75,7 @@ class PeopleController < ActionController::Base
     respond_to do |format|
       format.json { head :ok }
     end
+    
  end
  
 end

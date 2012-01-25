@@ -1,11 +1,13 @@
 module Api
   class Core < Sinatra::Base 
+    
     #Person
     get '/people' do
       people = Person.all
-      people.to_json
-      
+      people.to_json   
+       
     end
+    
     get '/people/:id' do
       people = Person.find(params[:id])
       people.to_json
@@ -43,8 +45,8 @@ module Api
       end
     end
     
-   
     
+  
 
   end
   

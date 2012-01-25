@@ -1,12 +1,13 @@
 PersonaRegistry::Application.routes.draw do
 
    
-  PersonaRegistry::Application.routes.draw do
-  match '/people' => Api::Core
-  end
-  PersonaRegistry::Application.routes.draw do
-  match '/people/:id' => Api::Core
-  end
+#  PersonaRegistry::Application.routes.draw do
+#   match '/people' => Api::Core
+#  end
+  
+#  PersonaRegistry::Application.routes.draw do
+#  match '/people/:id' => Api::Core
+#  end
 
   get "patterns/singleton"
 
@@ -15,7 +16,9 @@ PersonaRegistry::Application.routes.draw do
   get "patterns/builder"
 
   get "patterns/strategy"
-
+  
+  #Rails Rest routes
+  resources :people, :interests
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

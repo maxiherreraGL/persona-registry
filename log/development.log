@@ -2426,3 +2426,351 @@ Served asset /patterns.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-11 11:39:23 -0300
 Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-25 11:51:22 -0300
+  Processing by PatternsController#factory as HTML
+Rendered patterns/factory.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 441ms (Views: 424.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-25 11:51:27 -0300
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-25 11:51:28 -0300
+Served asset /patterns.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-25 11:51:28 -0300
+Served asset /jquery.js - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-25 11:51:28 -0300
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-25 11:51:28 -0300
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-25 11:51:28 -0300
+Served asset /patterns.js - 200 OK (7ms)
+
+
+Started GET "/people/show" for 127.0.0.1 at 2012-01-25 11:51:40 -0300
+  [1m[36m (0.0ms)[0m  [1mSHOW search_path[0m
+  [1m[35mPerson Load (28.0ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "show"]]
+
+
+Started GET "/__sinatra__/500.png" for 127.0.0.1 at 2012-01-25 11:51:42 -0300
+
+ActionController::RoutingError (No route matches [GET] "/__sinatra__/500.png"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 11:51:55 -0300
+  [1m[36mPerson Load (1.0ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+
+
+Started GET "/__sinatra__/500.png" for 127.0.0.1 at 2012-01-25 11:51:56 -0300
+
+ActionController::RoutingError (No route matches [GET] "/__sinatra__/500.png"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+  [1m[36m (41.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePeople (20120106121806)
+Migrating to CreatePersonas (20120106121841)
+Migrating to CreatePersonaPeople (20120106121917)
+Migrating to CreateInterests (20120106121943)
+Migrating to CreateInterestPersonas (20120106122004)
+Migrating to CreateRols (20120106122025)
+Migrating to CreatePersonRols (20120106130558)
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 11:55:19 -0300
+  [1m[36m (1.0ms)[0m  [1mSHOW search_path[0m
+  [1m[35mPerson Load (26.0ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "1"]]
+
+
+Started GET "/people/1.xml" for 127.0.0.1 at 2012-01-25 11:55:39 -0300
+  [1m[36mPerson Load (0.0ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1.xml"]]
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-25 12:19:21 -0300
+  Processing by PatternsController#factory as HTML
+Rendered patterns/factory.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 234ms (Views: 225.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-25 12:19:25 -0300
+Served asset /jquery.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-25 12:19:25 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-25 12:19:25 -0300
+Served asset /patterns.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-25 12:19:25 -0300
+Served asset /patterns.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-25 12:19:25 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-25 12:19:25 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/patterns/people/destroy/1" for 127.0.0.1 at 2012-01-25 12:19:36 -0300
+
+ActionController::RoutingError (No route matches [GET] "/patterns/people/destroy/1"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/people/destroy/1" for 127.0.0.1 at 2012-01-25 12:19:45 -0300
+
+ActionController::RoutingError (No route matches [GET] "/people/destroy/1"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/people/destroy/1" for 127.0.0.1 at 2012-01-25 12:19:47 -0300
+
+ActionController::RoutingError (No route matches [GET] "/people/destroy/1"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:20:26 -0300
+
+ActionController::RoutingError (No route matches [GET] "/people/1"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:20:30 -0300
+
+ActionController::RoutingError (No route matches [GET] "/people/1"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:21:23 -0300
+  [1m[36m (0.0ms)[0m  [1mSHOW search_path[0m
+  [1m[35mPerson Load (1.0ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "1"]]
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:21:38 -0300
+  [1m[36mPerson Load (2.0ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:21:44 -0300
+  [1m[35mPerson Load (0.0ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "1"]]
+
+
+Started GET "/people/2" for 127.0.0.1 at 2012-01-25 12:23:05 -0300
+  [1m[36mPerson Load (0.0ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+
+
+Started GET "/people/" for 127.0.0.1 at 2012-01-25 12:23:08 -0300
+  [1m[35mPerson Load (0.0ms)[0m  SELECT "people".* FROM "people" 
+
+
+Started GET "/interests/" for 127.0.0.1 at 2012-01-25 12:27:32 -0300
+
+ActionController::RoutingError (No route matches [GET] "/interests"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-25 12:44:01 -0300
+  Processing by PatternsController#factory as HTML
+Rendered patterns/factory.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 42ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-25 12:44:02 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-25 12:44:02 -0300
+Served asset /patterns.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-25 12:44:02 -0300
+Served asset /patterns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-25 12:44:02 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-25 12:44:02 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-25 12:44:02 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/interests/" for 127.0.0.1 at 2012-01-25 12:44:08 -0300
+  Processing by InterestsController#index as HTML
+Completed 406 Not Acceptable in 0ms
+
+
+Started GET "/interests/1" for 127.0.0.1 at 2012-01-25 12:44:24 -0300
+  Processing by InterestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInterest Load (1.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 406 Not Acceptable in 5ms
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:45:29 -0300
+  Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.0ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 406 Not Acceptable in 4ms
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:46:29 -0300
+  Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPerson Load (0.0ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 406 Not Acceptable in 6ms
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:48:04 -0300
+
+NameError (undefined local variable or method `interests' for #<ActionDispatch::Routing::Mapper:0x394b768>):
+  config/routes.rb:21:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:48:09 -0300
+
+ActionController::RoutingError (No route matches [GET] "/people/1"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:48:47 -0300
+  Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (2.0ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 406 Not Acceptable in 9ms
+
+
+Started GET "/people/" for 127.0.0.1 at 2012-01-25 12:54:52 -0300
+  Processing by PeopleController#index as HTML
+Completed 406 Not Acceptable in 0ms
+
+
+Started GET "/people/index" for 127.0.0.1 at 2012-01-25 12:56:12 -0300
+  Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mPerson Load (1.0ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "index"]]
+Completed 404 Not Found in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with id=index):
+  app/controllers/people_controller.rb:16:in `show'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (51.0ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:56:26 -0300
+  Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.0ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 406 Not Acceptable in 5ms
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-01-25 12:57:48 -0300
+  Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPerson Load (0.0ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 406 Not Acceptable in 4ms
+
+
+Started GET "/people/1.json" for 127.0.0.1 at 2012-01-25 12:58:16 -0300
+  Processing by PeopleController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.0ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/people/" for 127.0.0.1 at 2012-01-25 13:12:25 -0300
+  Processing by PeopleController#index as XML
+  [1m[36mPerson Load (1.0ms)[0m  [1mSELECT "people".* FROM "people" ORDER BY name[0m
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/people/" for 127.0.0.1 at 2012-01-25 13:12:41 -0300
+  Processing by PeopleController#index as XML
+  [1m[35mPerson Load (1.0ms)[0m  SELECT "people".* FROM "people" ORDER BY name
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2012-01-25 13:13:10 -0300
+  Processing by PeopleController#index as XML
+  [1m[36mPerson Load (0.0ms)[0m  [1mSELECT "people".* FROM "people" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2012-01-25 13:14:41 -0300
+  [1m[35mPerson Load (1.0ms)[0m  SELECT "people".* FROM "people" 
+
+
+Started GET "/people/" for 127.0.0.1 at 2012-01-25 13:14:52 -0300
+  [1m[36mPerson Load (0.0ms)[0m  [1mSELECT "people".* FROM "people" [0m
+
+
+Started GET "/people" for 127.0.0.1 at 2012-01-25 13:14:59 -0300
+  [1m[35mPerson Load (1.0ms)[0m  SELECT "people".* FROM "people" 
+
+
+Started GET "/people" for 127.0.0.1 at 2012-01-25 13:15:40 -0300
+  [1m[36mPerson Load (1.0ms)[0m  [1mSELECT "people".* FROM "people" [0m
+
+
+Started GET "/people" for 127.0.0.1 at 2012-01-25 13:16:00 -0300
+  Processing by PeopleController#index as XML
+  [1m[35mPerson Load (0.0ms)[0m  SELECT "people".* FROM "people" ORDER BY name
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/interest" for 127.0.0.1 at 2012-01-25 13:16:25 -0300
+
+ActionController::RoutingError (No route matches [GET] "/interest"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/interests" for 127.0.0.1 at 2012-01-25 13:16:50 -0300
+  Processing by InterestsController#index as XML
+  [1m[36mInterest Load (1.0ms)[0m  [1mSELECT "interests".* FROM "interests" ORDER BY name[0m
+Completed 200 OK in 181ms (Views: 178.9ms | ActiveRecord: 2.0ms)
