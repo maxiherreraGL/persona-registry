@@ -38,14 +38,14 @@ class PeopleController < ActionController::Base
   # POST /people
   # POST /people.json
   def create
-    @person = Person.new(params[:user])
+    @person = Person.new(params[:person])
     
     respond_to do |format|
       if @person.save
-        format.xml { render :xml => @person,
+        format.json { render :json => @person,
         :status => :created, :location => @person }
       else
-        format.xml { render :xml => @person.errors,
+        format.json { render :json => @person.errors,
         :status => :unprocessable_entity }
       end
     end
@@ -58,9 +58,9 @@ class PeopleController < ActionController::Base
     
     respond_to do |format|
       if @person.update_attributes(params[:person])
-        format.xml { head :ok }
+        format.json { head :ok }
       else
-        format.xml { render :xml => @person.errors,
+        format.json { render :json => @person.errors,
         :status => :unprocessable_entity }
       end
     end

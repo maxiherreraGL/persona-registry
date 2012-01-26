@@ -5,7 +5,7 @@ class InterestsController < ActionController::Base
   def index
     @interests = Interest.order(:name)
       respond_to do |format|
-      format.xml { render :xml => @interests }
+      format.json { render :json => @interests }
     end
   end
 
@@ -41,10 +41,10 @@ class InterestsController < ActionController::Base
     
     respond_to do |format|
       if @interest.save
-        format.xml { render :xml => @interest,
+        format.json { render :json => @interest,
         :status => :created, :location => @interest }
       else
-        format.xml { render :xml => @interest.errors,
+        format.json { render :json => @interest.errors,
         :status => :unprocessable_entity }
       end
     end
@@ -57,9 +57,9 @@ class InterestsController < ActionController::Base
     
     respond_to do |format|
       if @interest.update_attributes(params[:interest])
-        format.xml { head :ok }
+        format.json { head :ok }
       else
-        format.xml { render :xml => @interest.errors,
+        format.json { render :json => @interest.errors,
         :status => :unprocessable_entity }
       end
     end

@@ -18,7 +18,11 @@ PersonaRegistry::Application.routes.draw do
   get "patterns/strategy"
   
   #Rails Rest routes
-  resources :people, :interests
+  resources :people, :personas
+  
+  namespace :personas do
+    resources :interests
+   end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
