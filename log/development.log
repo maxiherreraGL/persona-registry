@@ -3293,3 +3293,1264 @@ ActionController::RoutingError (No route matches [GET] "/interests"):
   
 
 Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePeople (20120106121806)
+Migrating to CreatePersonas (20120106121841)
+Migrating to CreatePersonaPeople (20120106121917)
+Migrating to CreateInterests (20120106121943)
+Migrating to CreateInterestPersonas (20120106122004)
+Migrating to CreateRols (20120106122025)
+Migrating to CreatePersonRols (20120106130558)
+Migrating to AddDetailsToInterests (20120126183919)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (59.0ms)[0m  [1mALTER TABLE "interests" ADD COLUMN "persona" persona[0m
+PGError: ERROR:  no existe el tipo «persona»
+LINE 1: ALTER TABLE "interests" ADD COLUMN "persona" persona
+                                                     ^
+: ALTER TABLE "interests" ADD COLUMN "persona" persona
+  [1m[35m (0.0ms)[0m  ROLLBACK
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-26 15:50:48 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (2.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-26 15:50:52 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-26 15:50:53 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/interests/1" for 127.0.0.1 at 2012-01-26 15:50:54 -0300
+
+ActionController::RoutingError (uninitialized constant Personas):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (58.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePeople (20120106121806)
+Migrating to CreatePersonas (20120106121841)
+Migrating to CreatePersonaPeople (20120106121917)
+Migrating to CreateInterests (20120106121943)
+Migrating to CreateInterestPersonas (20120106122004)
+Migrating to CreateRols (20120106122025)
+Migrating to CreatePersonRols (20120106130558)
+Migrating to AddDetailsToInterests (20120126183919)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (37.0ms)[0m  [1mALTER TABLE "interests" DROP "persona"[0m
+PGError: ERROR:  no existe la columna «persona» en la relación «interests»
+: ALTER TABLE "interests" DROP "persona"
+  [1m[35m (1.0ms)[0m  ROLLBACK
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-26 16:56:53 -0300
+
+ArgumentError (Unknown key: through):
+  app/models/persona.rb:2:in `<class:Persona>'
+  app/models/persona.rb:1:in `<top (required)>'
+  app/controllers/personas_controller.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (28.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (78.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-26 16:57:03 -0300
+
+ArgumentError (Unknown key: through):
+  app/models/persona.rb:2:in `<class:Persona>'
+  app/models/persona.rb:1:in `<top (required)>'
+  app/controllers/personas_controller.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-26 16:58:57 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (2.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-26 16:59:01 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-26 16:59:02 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-26 16:59:03 -0300
+
+ActionController::RoutingError (No route matches [GET] "/personas/1/interests"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (58.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-26 17:04:09 -0300
+  Processing by PersonasController#index as XML
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-26 17:04:10 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-26 17:04:11 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/interests/1" for 127.0.0.1 at 2012-01-26 17:04:12 -0300
+
+ActionController::RoutingError (uninitialized constant Personas):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-26 17:05:24 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-26 17:05:25 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-26 17:05:26 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/interests" for 127.0.0.1 at 2012-01-26 17:05:27 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"interests"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "interests"]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Persona with id=interests):
+  app/controllers/personas_controller.rb:16:in `show'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/patterns/factory" for 127.0.0.1 at 2012-01-27 11:03:36 -0300
+  Processing by PatternsController#factory as HTML
+Rendered patterns/factory.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 374ms (Views: 374.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-27 11:03:39 -0300
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/patterns.css?body=1" for 127.0.0.1 at 2012-01-27 11:03:40 -0300
+Served asset /patterns.css - 200 OK (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-27 11:03:40 -0300
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-27 11:03:40 -0300
+Served asset /jquery.js - 200 OK (15ms)
+
+
+Started GET "/assets/patterns.js?body=1" for 127.0.0.1 at 2012-01-27 11:03:40 -0300
+Served asset /patterns.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-27 11:03:41 -0300
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 11:03:45 -0300
+  Processing by PersonasController#index as HTML
+Completed 406 Not Acceptable in 0ms
+
+
+Started GET "/personas.json" for 127.0.0.1 at 2012-01-27 11:03:50 -0300
+  Processing by PersonasController#index as JSON
+  [1m[36mPersona Load (15.6ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/personas/interests" for 127.0.0.1 at 2012-01-27 11:03:58 -0300
+  Processing by PersonasController#show as HTML
+  Parameters: {"id"=>"interests"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "interests"]]
+Completed 404 Not Found in 0ms
+
+ActiveRecord::RecordNotFound (Couldn't find Persona with id=interests):
+  app/controllers/personas_controller.rb:16:in `show'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 11:04:11 -0300
+
+ActionController::RoutingError (No route matches [GET] "/personas/1/interests"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 11:15:37 -0300
+
+NameError (undefined local variable or method `map' for #<ActionDispatch::Routing::Mapper:0x53faca8>):
+  config/routes.rb:23:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 11:15:54 -0300
+
+NoMethodError (undefined method `resources' for nil:NilClass):
+  config/routes.rb:24:in `block (2 levels) in <top (required)>'
+  config/routes.rb:23:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 11:17:06 -0300
+
+ActionController::RoutingError (No route matches [GET] "/personas/1/interests"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 11:29:35 -0300
+
+NameError (undefined local variable or method `has_many' for #<ActionDispatch::Routing::Mapper:0x5392e90>):
+  config/routes.rb:21:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 11:30:13 -0300
+
+ActionController::RoutingError (No route matches [GET] "/personas/1/interests"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 11:33:48 -0300
+
+ActionController::RoutingError (No route matches [GET] "/personas/1/interests"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 11:33:50 -0300
+
+ActionController::RoutingError (No route matches [GET] "/personas/1/interests"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 11:34:15 -0300
+
+ActionController::RoutingError (No route matches [GET] "/personas/1/interests"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 11:34:16 -0300
+
+ActionController::RoutingError (No route matches [GET] "/personas/1/interests"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 11:36:25 -0300
+
+ActionController::RoutingError (No route matches [GET] "/personas/1/interests"):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 11:56:48 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 11:56:52 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 11:56:53 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/interests/1" for 127.0.0.1 at 2012-01-27 11:56:54 -0300
+
+ActionController::RoutingError (uninitialized constant Personas):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (57.0ms)
+
+
+Started GET "/personas/interests/1" for 127.0.0.1 at 2012-01-27 11:57:04 -0300
+
+ActionController::RoutingError (uninitialized constant Personas):
+  
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/personas/interests" for 127.0.0.1 at 2012-01-27 11:57:44 -0300
+  Processing by PersonasController#show as HTML
+  Parameters: {"id"=>"interests"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "interests"]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Persona with id=interests):
+  app/controllers/personas_controller.rb:16:in `show'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 11:58:10 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 11:58:11 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 11:58:12 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/interests" for 127.0.0.1 at 2012-01-27 11:58:13 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"interests"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "interests"]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Persona with id=interests):
+  app/controllers/personas_controller.rb:16:in `show'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/interests" for 127.0.0.1 at 2012-01-27 11:58:30 -0300
+  Processing by PersonasController#show as HTML
+  Parameters: {"id"=>"interests"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "interests"]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Persona with id=interests):
+  app/controllers/personas_controller.rb:16:in `show'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+  [1m[36m (22.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePeople (20120106121806)
+Migrating to CreatePersonas (20120106121841)
+Migrating to CreatePersonaPeople (20120106121917)
+Migrating to CreateInterests (20120106121943)
+Migrating to CreateInterestPersonas (20120106122004)
+Migrating to CreateRols (20120106122025)
+Migrating to CreatePersonRols (20120106130558)
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 15:41:13 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 15:41:17 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 15:41:18 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 15:41:19 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+Completed 404 Not Found in 9ms
+
+ActiveRecord::RecordNotFound (Couldn't find Persona without an ID):
+  app/controllers/interests_controller.rb:84:in `get_persona'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 15:41:41 -0300
+  Processing by InterestsController#index as HTML
+  Parameters: {"persona_id"=>"1"}
+Completed 404 Not Found in 9ms
+
+ActiveRecord::RecordNotFound (Couldn't find Persona without an ID):
+  app/controllers/interests_controller.rb:84:in `get_persona'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 15:41:49 -0300
+  Processing by InterestsController#index as HTML
+  Parameters: {"persona_id"=>"1"}
+Completed 404 Not Found in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Persona without an ID):
+  app/controllers/interests_controller.rb:84:in `get_persona'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 15:43:03 -0300
+  Processing by InterestsController#index as HTML
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 406 Not Acceptable in 186ms
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 15:43:11 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 15:43:12 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 15:43:13 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 15:43:15 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mInterest Load (46.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."persona_id" = 1[0m
+PGError: ERROR:  no existe la columna interests.persona_id
+LINE 1: SELECT "interests".* FROM "interests"  WHERE "interests"."pe...
+                                                     ^
+: SELECT "interests".* FROM "interests"  WHERE "interests"."persona_id" = 1
+Completed 500 Internal Server Error in 168ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  no existe la columna interests.persona_id
+LINE 1: SELECT "interests".* FROM "interests"  WHERE "interests"."pe...
+                                                     ^
+: SELECT "interests".* FROM "interests"  WHERE "interests"."persona_id" = 1):
+  app/controllers/interests_controller.rb:11:in `block (2 levels) in index'
+  app/controllers/interests_controller.rb:10:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 15:43:25 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mInterest Load (0.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."persona_id" = 1[0m
+PGError: ERROR:  no existe la columna interests.persona_id
+LINE 1: SELECT "interests".* FROM "interests"  WHERE "interests"."pe...
+                                                     ^
+: SELECT "interests".* FROM "interests"  WHERE "interests"."persona_id" = 1
+Completed 500 Internal Server Error in 23ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  no existe la columna interests.persona_id
+LINE 1: SELECT "interests".* FROM "interests"  WHERE "interests"."pe...
+                                                     ^
+: SELECT "interests".* FROM "interests"  WHERE "interests"."persona_id" = 1):
+  app/controllers/interests_controller.rb:11:in `block (2 levels) in index'
+  app/controllers/interests_controller.rb:10:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 15:43:32 -0300
+  Processing by InterestsController#index as HTML
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 406 Not Acceptable in 13ms
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 15:45:27 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 15:45:28 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 15:45:29 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 15:45:30 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mInterest Load (0.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."persona_id" = 1 ORDER BY name[0m
+PGError: ERROR:  no existe la columna interests.persona_id
+LINE 1: SELECT "interests".* FROM "interests"  WHERE "interests"."pe...
+                                                     ^
+: SELECT "interests".* FROM "interests"  WHERE "interests"."persona_id" = 1 ORDER BY name
+Completed 500 Internal Server Error in 41ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  no existe la columna interests.persona_id
+LINE 1: SELECT "interests".* FROM "interests"  WHERE "interests"."pe...
+                                                     ^
+: SELECT "interests".* FROM "interests"  WHERE "interests"."persona_id" = 1 ORDER BY name):
+  app/controllers/interests_controller.rb:11:in `block (2 levels) in index'
+  app/controllers/interests_controller.rb:10:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 15:45:41 -0300
+  Processing by InterestsController#index as HTML
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 406 Not Acceptable in 19ms
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 15:45:45 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mInterest Load (1.0ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."persona_id" = 1 ORDER BY name
+PGError: ERROR:  no existe la columna interests.persona_id
+LINE 1: SELECT "interests".* FROM "interests"  WHERE "interests"."pe...
+                                                     ^
+: SELECT "interests".* FROM "interests"  WHERE "interests"."persona_id" = 1 ORDER BY name
+Completed 500 Internal Server Error in 21ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  no existe la columna interests.persona_id
+LINE 1: SELECT "interests".* FROM "interests"  WHERE "interests"."pe...
+                                                     ^
+: SELECT "interests".* FROM "interests"  WHERE "interests"."persona_id" = 1 ORDER BY name):
+  app/controllers/interests_controller.rb:11:in `block (2 levels) in index'
+  app/controllers/interests_controller.rb:10:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePeople (20120106121806)
+Migrating to CreatePersonas (20120106121841)
+Migrating to CreatePersonaPeople (20120106121917)
+Migrating to CreateInterests (20120106121943)
+Migrating to CreateInterestPersonas (20120106122004)
+Migrating to CreateRols (20120106122025)
+Migrating to CreatePersonRols (20120106130558)
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 16:16:44 -0300
+
+ActionController::RoutingError (undefined method `has_and_belong_to_many' for #<Class:0x3349b18>):
+  app/models/persona.rb:2:in `<class:Persona>'
+  app/models/persona.rb:1:in `<top (required)>'
+  app/controllers/personas_controller.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (42.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:16:58 -0300
+
+ActionController::RoutingError (undefined method `has_and_belong_to_many' for #<Class:0x323b3f8>):
+  app/models/interest.rb:2:in `<class:Interest>'
+  app/models/interest.rb:1:in `<top (required)>'
+  app/controllers/interests_controller.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 16:17:41 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 16:17:43 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 28ms (Views: 22.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 16:17:44 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 16:17:45 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 50ms
+
+NameError (undefined local variable or method `interestsId' for #<InterestsController:0x3d62450>):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:17:51 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 53ms
+
+NameError (undefined local variable or method `interestsId' for #<InterestsController:0x3d523d0>):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 16:18:38 -0300
+  Processing by PersonasController#index as XML
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 16:18:39 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 16:18:40 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 16:18:41 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 53ms
+
+NameError (undefined local variable or method `persona' for #<InterestsController:0x3bf51a0>):
+  app/controllers/interests_controller.rb:90:in `get_interests_by_persona'
+  app/controllers/interests_controller.rb:85:in `get_persona'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:18:45 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 57ms
+
+NameError (undefined local variable or method `persona' for #<InterestsController:0x3ddf0d0>):
+  app/controllers/interests_controller.rb:90:in `get_interests_by_persona'
+  app/controllers/interests_controller.rb:85:in `get_persona'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 16:20:45 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 16:20:46 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 16:20:48 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 16:20:49 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mInterestPersona Load (2.0ms)[0m  [1mSELECT "interest_personas".* FROM "interest_personas" WHERE (pesona_id = 1)[0m
+PGError: ERROR:  no existe la columna «pesona_id»
+LINE 1: ...rest_personas".* FROM "interest_personas"  WHERE (pesona_id ...
+                                                             ^
+: SELECT "interest_personas".* FROM "interest_personas"  WHERE (pesona_id = 1)
+Completed 500 Internal Server Error in 115ms
+
+NameError (undefined local variable or method `interestsId' for #<InterestsController:0x3bf8ff8>):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:20:52 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mInterestPersona Load (0.0ms)[0m  [1mSELECT "interest_personas".* FROM "interest_personas" WHERE (pesona_id = 1)[0m
+PGError: ERROR:  no existe la columna «pesona_id»
+LINE 1: ...rest_personas".* FROM "interest_personas"  WHERE (pesona_id ...
+                                                             ^
+: SELECT "interest_personas".* FROM "interest_personas"  WHERE (pesona_id = 1)
+Completed 500 Internal Server Error in 54ms
+
+NameError (undefined local variable or method `interestsId' for #<InterestsController:0x3d58f70>):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 16:21:17 -0300
+  Processing by PersonasController#index as XML
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 16:21:18 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 16:21:19 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 16:21:20 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mInterest Load (19.0ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 2)
+Completed 500 Internal Server Error in 47ms
+
+NoMethodError (undefined method `order' for #<Array:0x42a8510>):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:21:24 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mInterest Load (0.0ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 2)
+Completed 500 Internal Server Error in 26ms
+
+NoMethodError (undefined method `order' for #<Array:0x3bf6268>):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 16:22:19 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 16:22:20 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 16:22:21 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 16:22:22 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mInterest Load (1.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 2)[0m
+Completed 500 Internal Server Error in 46ms
+
+NoMethodError (undefined method `order' for #<Array:0x5125410>):
+  app/controllers/interests_controller.rb:9:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:22:26 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mInterest Load (1.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 2)[0m
+Completed 500 Internal Server Error in 30ms
+
+NoMethodError (undefined method `order' for #<Array:0x5011cb0>):
+  app/controllers/interests_controller.rb:9:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:22:29 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mInterest Load (1.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 2)[0m
+Completed 500 Internal Server Error in 46ms
+
+NoMethodError (undefined method `order' for #<Array:0x38a3e88>):
+  app/controllers/interests_controller.rb:9:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:22:47 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mInterest Load (0.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 2)[0m
+Completed 200 OK in 32ms (Views: 7.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 16:22:52 -0300
+  Processing by PersonasController#index as XML
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 16:22:53 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 16:22:54 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 16:22:55 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mInterest Load (0.0ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 2)
+Completed 200 OK in 32ms (Views: 7.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:23:32 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mInterestPersona Load (1.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (pesona_id = 1)
+PGError: ERROR:  no existe la columna «pesona_id»
+LINE 1: ...rest_personas".* FROM "interest_personas"  WHERE (pesona_id ...
+                                                             ^
+: SELECT "interest_personas".* FROM "interest_personas"  WHERE (pesona_id = 1)
+Completed 500 Internal Server Error in 55ms
+
+NameError (undefined local variable or method `interestsId' for #<InterestsController:0x3d61850>):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:26:20 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mInterestPersona Load (1.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (pesona_id = 1)
+PGError: ERROR:  no existe la columna «pesona_id»
+LINE 1: ...rest_personas".* FROM "interest_personas"  WHERE (pesona_id ...
+                                                             ^
+: SELECT "interest_personas".* FROM "interest_personas"  WHERE (pesona_id = 1)
+Completed 500 Internal Server Error in 23ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  no existe la columna «pesona_id»
+LINE 1: ...rest_personas".* FROM "interest_personas"  WHERE (pesona_id ...
+                                                             ^
+: SELECT "interest_personas".* FROM "interest_personas"  WHERE (pesona_id = 1)):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:26:46 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mInterestPersona Load (13.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = 1)
+Completed 500 Internal Server Error in 44ms
+
+TypeError (Cannot visit InterestPersona):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:40:32 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mInterestPersona Load (0.0ms)[0m  [1mSELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')[0m
+Completed 500 Internal Server Error in 37ms
+
+TypeError (Cannot visit InterestPersona):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:40:58 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mInterestPersona Load (1.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = NULL)
+Completed 404 Not Found in 10ms
+
+ActiveRecord::RecordNotFound (Couldn't find Interest without an ID):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:41:27 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mInterestPersona Load (1.0ms)[0m  [1mSELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = 1)[0m
+Completed 500 Internal Server Error in 18ms
+
+TypeError (Cannot visit InterestPersona):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:41:40 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mInterestPersona Load (1.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')
+Completed 500 Internal Server Error in 19ms
+
+TypeError (Cannot visit InterestPersona):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:41:41 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mInterestPersona Load (0.0ms)[0m  [1mSELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')[0m
+Completed 500 Internal Server Error in 18ms
+
+TypeError (Cannot visit InterestPersona):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:41:42 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mInterestPersona Load (1.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')
+Completed 500 Internal Server Error in 22ms
+
+TypeError (Cannot visit InterestPersona):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:41:42 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mInterestPersona Load (1.0ms)[0m  [1mSELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')[0m
+Completed 500 Internal Server Error in 17ms
+
+TypeError (Cannot visit InterestPersona):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:41:42 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mInterestPersona Load (1.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')
+Completed 500 Internal Server Error in 18ms
+
+TypeError (Cannot visit InterestPersona):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 16:41:43 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mInterestPersona Load (1.0ms)[0m  [1mSELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')[0m
+Completed 500 Internal Server Error in 19ms
+
+TypeError (Cannot visit InterestPersona):
+  app/controllers/interests_controller.rb:8:in `index'
+
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 16:49:15 -0300
+  Processing by PersonasController#index as XML
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 16:49:16 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 16:49:17 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 16:49:18 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mInterest Load (1.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 2)[0m
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 17:04:22 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mInterestPersona Load (1.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')
+  [1m[36mInterest Load (0.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 3)[0m
+Completed 200 OK in 25ms (Views: 6.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 17:04:28 -0300
+  Processing by PersonasController#index as XML
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 17:04:30 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 17:04:31 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 17:04:32 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mInterestPersona Load (1.0ms)[0m  [1mSELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')[0m
+  [1m[35mInterest Load (0.0ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 3)
+Completed 200 OK in 23ms (Views: 6.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-27 17:05:19 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-27 17:05:20 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-27 17:05:21 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-27 17:05:22 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mInterestPersona Load (0.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')
+  [1m[36mInterest Load (0.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 3)[0m
+Completed 200 OK in 26ms (Views: 6.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 17:07:09 -0300
+  Processing by InterestsController#index as JSON
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mInterestPersona Load (0.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')
+  [1m[36mInterest Load (0.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 3)[0m
+Completed 200 OK in 24ms (Views: 6.0ms | ActiveRecord: 6.0ms)

@@ -1,10 +1,13 @@
 class InterestsController < ActionController::Base
   
-  # GET /interests
-  # GET /interests.json
+  before_filter :get_interests_by_persona
+  
+  # GET personas/1/interests
+  # GET personas/1/interests.json
   def index
-    @interests = Interest.order(:name)
-      respond_to do |format|
+    @interests = Interest.find(@interestsId)
+    
+    respond_to do |format|
       format.json { render :json => @interests }
     end
   end
@@ -73,8 +76,18 @@ class InterestsController < ActionController::Base
 
     respond_to do |format|
       format.json { head :ok }
-    end
-    
+    end 
  end
  
+ private 
+  def get_interests_by_persona
+    interest_persona = InterestPersona.where("persona_id = ?", params[:persona_id])
+    
+    @interestsId = Array.new
+    
+    interest_persona.each do |i|
+      @interestsId << i.interest_id
+    end
+    
+  end
 end
