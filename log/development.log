@@ -4554,3 +4554,115 @@ Started GET "/personas/1/interests.json" for 127.0.0.1 at 2012-01-27 17:07:09 -0
   [1m[35mInterestPersona Load (0.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')
   [1m[36mInterest Load (0.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 3)[0m
 Completed 200 OK in 24ms (Views: 6.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-30 13:01:42 -0300
+  Processing by PersonasController#index as XML
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-30 13:01:46 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-30 13:01:48 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY name[0m
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/interests/1" for 127.0.0.1 at 2012-01-30 13:01:49 -0300
+  Processing by InterestsController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mInterestPersona Load (3.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = NULL)
+  [1m[36mInterest Load (44.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 130ms (Views: 15.0ms | ActiveRecord: 51.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-30 13:01:50 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[35mInterestPersona Load (21.0ms)[0m  SELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')
+  [1m[36mInterest Load (0.0ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 3)[0m
+Completed 200 OK in 45ms (Views: 7.0ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/rols/1" for 127.0.0.1 at 2012-01-30 13:01:51 -0300
+  Processing by RolsController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersonRol Load (9.0ms)[0m  SELECT "person_rols".* FROM "person_rols" WHERE (person_id = NULL)
+  [1m[36mRol Load (2.0ms)[0m  [1mSELECT "rols".* FROM "rols" WHERE "rols"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 28ms (Views: 6.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/people/1/rols" for 127.0.0.1 at 2012-01-30 13:01:52 -0300
+  Processing by RolsController#index as XML
+  Parameters: {"person_id"=>"1"}
+  [1m[35mPersonRol Load (1.0ms)[0m  SELECT "person_rols".* FROM "person_rols" WHERE (person_id = '1')
+  [1m[36mRol Load (0.0ms)[0m  [1mSELECT "rols".* FROM "rols" WHERE "rols"."id" IN (1, 2)[0m
+Completed 200 OK in 25ms (Views: 6.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/personas" for 127.0.0.1 at 2012-01-30 13:02:47 -0300
+  Processing by PersonasController#index as XML
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/personas/1" for 127.0.0.1 at 2012-01-30 13:02:48 -0300
+  Processing by PersonasController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersona Load (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/personas?name=QA" for 127.0.0.1 at 2012-01-30 13:02:49 -0300
+  Processing by PersonasController#index as XML
+  Parameters: {"name"=>"QA"}
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" ORDER BY name
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/interests/1" for 127.0.0.1 at 2012-01-30 13:02:50 -0300
+  Processing by InterestsController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[36mInterestPersona Load (1.0ms)[0m  [1mSELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = NULL)[0m
+  [1m[35mInterest Load (0.0ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 19ms (Views: 6.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/personas/1/interests" for 127.0.0.1 at 2012-01-30 13:02:51 -0300
+  Processing by InterestsController#index as XML
+  Parameters: {"persona_id"=>"1"}
+  [1m[36mInterestPersona Load (0.0ms)[0m  [1mSELECT "interest_personas".* FROM "interest_personas" WHERE (persona_id = '1')[0m
+  [1m[35mInterest Load (0.0ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."id" IN (1, 3)
+Completed 200 OK in 43ms (Views: 24.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/rols/1" for 127.0.0.1 at 2012-01-30 13:02:52 -0300
+  Processing by RolsController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersonRol Load (0.0ms)[0m  [1mSELECT "person_rols".* FROM "person_rols" WHERE (person_id = NULL)[0m
+  [1m[35mRol Load (0.0ms)[0m  SELECT "rols".* FROM "rols" WHERE "rols"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 17ms (Views: 6.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/people/1/rols" for 127.0.0.1 at 2012-01-30 13:02:53 -0300
+  Processing by RolsController#index as XML
+  Parameters: {"person_id"=>"1"}
+  [1m[36mPersonRol Load (1.0ms)[0m  [1mSELECT "person_rols".* FROM "person_rols" WHERE (person_id = '1')[0m
+  [1m[35mRol Load (1.0ms)[0m  SELECT "rols".* FROM "rols" WHERE "rols"."id" IN (1, 2)
+Completed 200 OK in 27ms (Views: 6.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/people/2/rols" for 127.0.0.1 at 2012-01-30 13:02:54 -0300
+  Processing by RolsController#index as XML
+  Parameters: {"person_id"=>"2"}
+  [1m[36mPersonRol Load (0.0ms)[0m  [1mSELECT "person_rols".* FROM "person_rols" WHERE (person_id = '2')[0m
+  [1m[35mRol Load (0.0ms)[0m  SELECT "rols".* FROM "rols" WHERE "rols"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 26ms (Views: 6.0ms | ActiveRecord: 5.0ms)

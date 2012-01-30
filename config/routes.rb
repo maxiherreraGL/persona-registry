@@ -20,10 +20,15 @@ PersonaRegistry::Application.routes.draw do
   #Rails Rest routes
   resources :people
   resources :interests
+  resources :rols
   
   
   resources :personas do
     resources :interests
+  end
+  
+  resources :people do
+    resources :rols
   end
 
   # The priority is based upon order of creation:
