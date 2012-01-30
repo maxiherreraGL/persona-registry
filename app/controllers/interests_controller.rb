@@ -5,7 +5,12 @@ class InterestsController < ActionController::Base
   # GET personas/1/interests
   # GET personas/1/interests.json
   def index
+    
     @interests = Interest.find(@interestsId)
+    
+    if params[:persona_id] == nil    
+      @interests = Interest.order(:name)  
+    end
     
     respond_to do |format|
       format.json { render :json => @interests }
