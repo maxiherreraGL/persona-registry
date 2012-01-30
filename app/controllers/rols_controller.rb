@@ -7,6 +7,10 @@ class RolsController < ActionController::Base
   def index
     @rols = Rol.find(@rolsId)
     
+    if params[:person_id] == nil    
+      @rols = Interest.order(:name)  
+    end
+    
     respond_to do |format|
       format.json { render :json => @rols }
     end
